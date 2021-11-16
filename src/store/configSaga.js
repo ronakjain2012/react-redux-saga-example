@@ -1,7 +1,7 @@
 import { combineReducers, createStore, applyMiddleware } from "redux";
 import createSagaMiddleware from "@redux-saga/core";
 import userReducer from "./stores/user";
-
+import logger from "redux-logger";
 import { watcherSaga } from './sagas/rootSaga'
 
 const reducer = combineReducers({
@@ -10,7 +10,7 @@ const reducer = combineReducers({
 
 const sagaMiddleware = createSagaMiddleware();
 
-const middlewares = [sagaMiddleware];
+const middlewares = [sagaMiddleware,logger];
 
 const store = createStore(reducer, {}, applyMiddleware(...middlewares));
 

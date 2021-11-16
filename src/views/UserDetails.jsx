@@ -15,8 +15,8 @@ const UsersCard = ({ user }) =>
                     <RandomImageProfile key={user.id.name + '-' + user.id.value} src={user.picture.medium} />
                 </Col>
                 <Col>
-                    <div class="ms-1">
-                        <h6 class="mb-0">{user.name.title} {user.name.first} {user.name.last}</h6> <span>ID {user.id.value ? user.id.name + '-' + user.id.value : '-- N/A --'}</span>
+                    <div className="ms-1">
+                        <h6 className="mb-0">{user.name.title} {user.name.first} {user.name.last}</h6> <span>ID {user.id.value ? user.id.name + '-' + user.id.value : '-- N/A --'}</span>
                     </div>
                 </Col>
             </Row>
